@@ -1,7 +1,7 @@
 <?php
 require 'vendor/autoload.php';
-if (isset($_post['authKey']) && ($_post['authKey'] == "abc"))
-// if(1)
+header('Content-Type: application/json');
+if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
     $stripe = new \Stripe\StripeClient('sk_test_51Q9FTVFaCGaX8xOkoGQjYZWRoTqZGBClcfnRvghpHZvxO8620cqXPBy9Hp4BWC6OOEJH4dp2DnUW11Cd6TjxwmHp005dyQxRae');
 
